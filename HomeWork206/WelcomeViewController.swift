@@ -19,14 +19,20 @@ final class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupWelcomeLabel()
-
+        setupGradientBackground()
+        
     }
-    
     
     private func setupWelcomeLabel() {
         welcomeLabel.textColor = UIColor.systemIndigo
         welcomeLabel.text = "Welcome, \(welcomeLabelText ?? "User")!"
     }
     
+    private func setupGradientBackground() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        gradientLayer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+        view.layer.insertSublayer(gradientLayer, at: 0)
+    }
 }
 

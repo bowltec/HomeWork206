@@ -24,10 +24,10 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let loginVC = segue.destination as? WelcomeViewController else { return }
         loginVC.welcomeLabelText = userName.text
-       
-    }
-    // MARK: - IBActions
     
+    }
+    
+    // MARK: - IBActions
     @IBAction func fogrotButtonsDidTapped(_ sender: UIButton) {
         switch sender.tag {
         case 0:
@@ -37,13 +37,13 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
     // MARK: - Private methods
     private func setupTextView(for textView: UITextField) {
         textView.layer.borderColor = UIColor.systemBlue.cgColor
         textView.layer.borderWidth = 1
     }
 }
+
 
 extension LoginViewController {
     private func showAlert(withTitle title: String, andMessage message: String) {
