@@ -9,18 +9,15 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     
-    //MARK: IBOutlets:
-    
+    //MARK: - IBOutlets
     @IBOutlet var welcomeLabel: UILabel!
     
     var welcomeLabelText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupWelcomeLabel()
+        setupWelcomeLabel() 
         setupGradientBackground()
-        
     }
     
     private func setupWelcomeLabel() {
@@ -28,11 +25,13 @@ final class WelcomeViewController: UIViewController {
         welcomeLabel.text = "Welcome, \(welcomeLabelText ?? "User")!"
     }
     
+}
+//MARK: CAGradientLayer
+extension WelcomeViewController {
     private func setupGradientBackground() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+        gradientLayer.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
-
