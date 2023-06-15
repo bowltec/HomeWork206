@@ -41,7 +41,7 @@
                                                 <color key="tintColor" systemColor="tintColor"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Log in" cornerStyle="large"/>
                                                 <connections>
-                                                    <segue destination="FUe-hj-pkM" kind="presentation" modalPresentationStyle="fullScreen" id="fge-eS-7kZ"/>
+                                                    <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="cGc-tq-gZz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -83,9 +83,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logInButton" destination="lF8-4Q-BUL" id="a3J-w4-ref"/>
-                        <outlet property="password" destination="nKc-3s-lMz" id="mWJ-ep-lgc"/>
-                        <outlet property="userName" destination="St3-yB-txf" id="Ff6-PZ-VQp"/>
+                        <outlet property="passwordTF" destination="nKc-3s-lMz" id="mWJ-ep-lgc"/>
+                        <outlet property="userNameTF" destination="St3-yB-txf" id="Ff6-PZ-VQp"/>
+                        <segue destination="FUe-hj-pkM" kind="presentation" identifier="showWelcomeSegue" modalPresentationStyle="fullScreen" id="UwA-FH-cFj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
