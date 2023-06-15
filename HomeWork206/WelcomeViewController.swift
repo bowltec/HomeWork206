@@ -26,7 +26,7 @@ final class WelcomeViewController: UIViewController {
     }
     
 }
-//MARK: CAGradientLayer
+//MARK: - Setup View Background
 extension WelcomeViewController {
     private func setupGradientBackground() {
         let gradientLayer = CAGradientLayer()
