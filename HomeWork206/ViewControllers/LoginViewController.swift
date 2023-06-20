@@ -7,35 +7,41 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
+    
     // MARK: - IBOutlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private var user = "User"
-    private var password = "Password"
+    let user = User.getUser()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        userNameTF.text = user.login
+        passwordTF.text = user.password
         setupTextView(for: userNameTF)
         setupTextView(for: passwordTF)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         
-        welcomeVC.welcomeLabelText = user
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                guard let userInfoVC = navigationVC.topViewController as? InfoViewController else { return }
+                userInfoVC.user = user
+            }
+        }
     }
     
     // MARK: - IBActions
     @IBAction func logInPressed() {
-        guard userNameTF.text == user,
-              passwordTF.text == password
+        guard userNameTF.text == user.login,
+              passwordTF.text == user.password
         else {
             showAlert(withTitle: "Incorrect Name or Password!",
                       andMessage: "Please enter correct Name and Password",
@@ -47,8 +53,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func fogrotButtonsDidTapped(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(withTitle: "Oops!", andMessage: "Your name is Eugeniya🙃")
-        : showAlert(withTitle: "Oops!", andMessage: "Your password is Password😎")
+        ? showAlert(withTitle: "Oops!", andMessage: "Your name is \(user.login)🙃")
+        : showAlert(withTitle: "Oops!", andMessage: "Your password is \(user.password)😎")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
