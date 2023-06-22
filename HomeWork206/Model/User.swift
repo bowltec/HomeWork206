@@ -59,7 +59,7 @@ struct Company {
     }
 }
 
-enum Department {
+enum Department: String {
     case PTO
     case engeneering
     case economic

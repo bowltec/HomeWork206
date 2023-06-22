@@ -13,14 +13,16 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     var user: User!
     
+    //MARK: - Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
         setupWelcomeLabel() 
         view.setupGradientBackground()
     }
     
+    // MARK: - Private methods
     private func setupWelcomeLabel() {
-        welcomeLabel.textColor = UIColor.systemIndigo
+        welcomeLabel.textColor = UIColor.white
         welcomeLabel.text = "Welcome, \(user.person.fullName)!"
     }
     

@@ -7,20 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7442E3252A42E5840074D18B /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7442E3242A42E5840074D18B /* BioViewController.swift */; };
 		7450AB872A3631FE003DBF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7450AB862A3631FE003DBF22 /* AppDelegate.swift */; };
 		7450AB892A3631FE003DBF22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7450AB882A3631FE003DBF22 /* SceneDelegate.swift */; };
 		7450AB8B2A3631FE003DBF22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7450AB8A2A3631FE003DBF22 /* LoginViewController.swift */; };
 		7450AB8E2A3631FE003DBF22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7450AB8C2A3631FE003DBF22 /* Main.storyboard */; };
 		7450AB902A3631FF003DBF22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7450AB8F2A3631FF003DBF22 /* Assets.xcassets */; };
 		7450AB932A3631FF003DBF22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7450AB912A3631FF003DBF22 /* LaunchScreen.storyboard */; };
+		749A23042A448066003D109B /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A23032A448066003D109B /* UIView + Extension.swift */; };
+		749A23062A44810A003D109B /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A23052A44810A003D109B /* UIViewController + Extension.swift */; };
 		749AB3B02A36685D006BC9B2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749AB3AF2A36685D006BC9B2 /* WelcomeViewController.swift */; };
 		74C7CEF92A4091D9001D33B0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7CEF82A4091D9001D33B0 /* InfoViewController.swift */; };
-		74C7CEFB2A409E72001D33B0 /* UIViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7CEFA2A409E72001D33B0 /* UIViewSetup.swift */; };
 		74C7CEFE2A420618001D33B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7CEFD2A420618001D33B0 /* User.swift */; };
 		74C7CF002A422A32001D33B0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C7CEFF2A422A32001D33B0 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7442E3242A42E5840074D18B /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		7450AB832A3631FE003DBF22 /* HomeWork206.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork206.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7450AB862A3631FE003DBF22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7450AB882A3631FE003DBF22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,9 +32,10 @@
 		7450AB8F2A3631FF003DBF22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7450AB922A3631FF003DBF22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7450AB942A3631FF003DBF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		749A23032A448066003D109B /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		749A23052A44810A003D109B /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		749AB3AF2A36685D006BC9B2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		74C7CEF82A4091D9001D33B0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		74C7CEFA2A409E72001D33B0 /* UIViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSetup.swift; sourceTree = "<group>"; };
 		74C7CEFD2A420618001D33B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		74C7CEFF2A422A32001D33B0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,8 +95,10 @@
 				7450AB8A2A3631FE003DBF22 /* LoginViewController.swift */,
 				749AB3AF2A36685D006BC9B2 /* WelcomeViewController.swift */,
 				74C7CEF82A4091D9001D33B0 /* InfoViewController.swift */,
-				74C7CEFA2A409E72001D33B0 /* UIViewSetup.swift */,
+				7442E3242A42E5840074D18B /* BioViewController.swift */,
 				74C7CEFF2A422A32001D33B0 /* TabBarController.swift */,
+				749A23032A448066003D109B /* UIView + Extension.swift */,
+				749A23052A44810A003D109B /* UIViewController + Extension.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -188,11 +194,13 @@
 				7450AB8B2A3631FE003DBF22 /* LoginViewController.swift in Sources */,
 				74C7CF002A422A32001D33B0 /* TabBarController.swift in Sources */,
 				749AB3B02A36685D006BC9B2 /* WelcomeViewController.swift in Sources */,
-				74C7CEFB2A409E72001D33B0 /* UIViewSetup.swift in Sources */,
 				7450AB872A3631FE003DBF22 /* AppDelegate.swift in Sources */,
 				7450AB892A3631FE003DBF22 /* SceneDelegate.swift in Sources */,
 				74C7CEF92A4091D9001D33B0 /* InfoViewController.swift in Sources */,
+				749A23062A44810A003D109B /* UIViewController + Extension.swift in Sources */,
 				74C7CEFE2A420618001D33B0 /* User.swift in Sources */,
+				7442E3252A42E5840074D18B /* BioViewController.swift in Sources */,
+				749A23042A448066003D109B /* UIView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

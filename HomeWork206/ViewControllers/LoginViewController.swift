@@ -23,6 +23,7 @@ final class LoginViewController: UIViewController {
         setupTextView(for: passwordTF)
     }
     
+    //MARK: - Override functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let tabBarController = segue.destination as? UITabBarController else { return }
